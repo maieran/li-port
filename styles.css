@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.social-icons img {
+    width: 24px;
+    margin: 0 10px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.info {
+    max-width: 50%;
+    text-align: left;
+}
+
+.tags span {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.profile-picture {
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    border-radius: 20px;
+}
+
+/* About Section */
+.about {
+    padding: 50px;
+}
+
+/* Skills Section */
+.skills {
+    padding: 50px;
+}
+
+.soft-skills, .hard-skills {
+    margin: 20px 0;
+}
+
+/* Tools Section */
+.tools {
+    padding: 50px;
+}
+
+.tool-icons img {
+    width: 50px;
+    margin: 10px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 50px;
+}
+
+.project {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.status.completed {
+    color: red;
+}
+
+/* Contacts Section */
+.contacts {
+    padding: 50px;
+}
+
+.contacts a {
+    color: white;
+    text-decoration: none;
+}
