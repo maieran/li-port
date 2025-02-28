@@ -47,9 +47,10 @@ header {
 }
 
 #picture-elizabeth {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     padding-left: 50px;
+    max-width: 500px; /* Adjust this value as needed */
 }
 
 /* About Section */
