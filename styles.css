@@ -11,14 +11,17 @@ body {
 /* Header */
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center; /* 🔹 Centers the logo in the header */
+    align-items: center;
     padding: 20px;
 }
 
-.social-icons img {
-    width: 24px;
-    margin: 0 10px;
+/* Logo Styling */
+.logo svg {
+    width: 120px; /* Adjust size as needed */
+    height: auto;
 }
+
 
 /* Hero Section */
 .hero {
@@ -66,10 +69,77 @@ header {
     padding: 50px;
 }
 
-.tool-icons img {
-    width: 50px;
-    margin: 10px;
+/* Tool Container */
+.tool-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
+
+/* Individual Tool Items */
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Tool Icons */
+.tool-item img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Tools Section */
+.tools {
+    padding: 50px;
+}
+
+/* Tool Icons Container */
+.tool-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* 🔹 Ensures equal spacing between tool icons */
+    flex-wrap: wrap; /* 🔹 Prevents overflow on small screens */
+}
+
+/* Individual Tool Items */
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100px; /* 🔹 Ensures equal space for each tool */
+}
+
+/* Tool Icons */
+.tool-item img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Tool Name (Hidden by Default) */
+.tool-item p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Effect: Icon Grows & Name Appears */
+.tool-item:hover img {
+    transform: scale(1.2);
+}
+
+.tool-item:hover p {
+    opacity: 1;
+}
+
 
 /* Projects Section */
 .projects {
@@ -93,13 +163,14 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: auto;
     overflow: hidden;
     position: relative;
+    padding-bottom: 50px;
 }
 
-/* "Soft Skills" text between title and slideshow */
-.soft-skills-title {
+/* Titles for Soft and Hard Skills */
+.soft-skills-title, .hard-skills-title {
     font-size: 14px;
     font-weight: bold;
     color: white;
@@ -109,8 +180,8 @@ header {
     border-radius: 30px;
 }
 
-/* Container for the slideshow */
-.soft-skills-container {
+/* Containers */
+.soft-skills-container, .hard-skills-container {
     width: 100%;
     max-width: 900px;
     overflow: hidden;
@@ -118,8 +189,8 @@ header {
     padding: 20px 0;
 }
 
-/* Wrapper for the sliding effect */
-.soft-skills-wrapper {
+/* Wrappers */
+.soft-skills-wrapper, .hard-skills-wrapper {
     display: flex;
     white-space: nowrap;
     overflow: hidden;
@@ -127,25 +198,31 @@ header {
     padding: 10px 0;
 }
 
-/* Slider that moves infinitely */
+/* Sliders */
 .soft-skills-slider {
     display: flex;
-    gap: 20px; /* Keeps spacing even between icons */
-    animation: slideLoop 70s linear infinite;
+    gap: 20px;
+    animation: slideLeft 40s linear infinite;
 }
 
-/* Soft skills items */
-.soft-skills-item {
+.hard-skills-slider {
+    display: flex;
+    gap: 20px;
+    animation: slideRight 40s linear infinite;
+}
+
+/* Individual Items */
+.soft-skills-item, .hard-skills-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 120px;
+    width: 180px;
     text-align: center;
 }
 
-/* Soft skill icons */
-.soft-skills-item img {
+/* Skill icons */
+.soft-skills-item img, .hard-skills-item img {
     width: 50px;
     height: 50px;
     background: white;
@@ -157,13 +234,13 @@ header {
 }
 
 /* Hover effect */
-.soft-skills-item:hover img {
+.soft-skills-item:hover img, .hard-skills-item:hover img {
     transform: scale(1.2);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
 
 /* Hide text by default */
-.soft-skills-item p {
+.soft-skills-item p, .hard-skills-item p {
     margin-top: 5px;
     font-size: 14px;
     color: white;
@@ -173,17 +250,51 @@ header {
 }
 
 /* Text appears only on hover */
-.soft-skills-item:hover p {
+.soft-skills-item:hover p, .hard-skills-item:hover p {
     opacity: 1;
 }
 
-/* Infinite scrolling effect */
-@keyframes slideLoop {
+/* Keyframes for infinite looping */
+@keyframes slideLeft {
     from {
         transform: translateX(0);
     }
     to {
         transform: translateX(-50%);
     }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* Contacts Section */
+.contacts {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Social Icons in Contacts */
+.contacts .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* 🔹 Ensures equal spacing between icons */
+    margin-top: 20px;
+}
+
+.contacts .social-icons a img {
+    width: 40px; /* 🔹 Adjust icon size */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.contacts .social-icons a:hover img {
+    transform: scale(1.2);
 }
 
