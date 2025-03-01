@@ -23,6 +23,63 @@ header {
 }
 
 
+
+/* General h2 Styling */
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px; /* Keeps ellipse shape */
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Ellipse Around h2 Titles */
+
+/* Hover Effect on h2: Subtle Color & Scale Change */
+h2:hover {
+    background: black; /* Match body background */
+    transform: scale(1.05);
+}
+
+/* Option 1: Underline with Glow Effect */
+h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #c0cace; /* Light blue underline */
+    display: block;
+    margin: 5px auto 0;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #9cc4d1; /* Glow effect */
+}
+
+/* Option 2: Background Highlight */
+h2 {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+/* Option 3: Top and Bottom Borders */
+h2 {
+    border-top: 3px solid #84bcd3;
+    border-bottom: 3px solid #89becf;
+    padding: 10px 0;
+    display: inline-block;
+}
+
+/* Option 4: Shadow for Depth */
+h2 {
+    text-shadow: 3px 3px 10px rgba(117, 178, 201, 0.6);
+}
+
+
 /* Hero Section */
 .hero {
     display: flex;
@@ -44,10 +101,48 @@ header {
     border: 1px solid white;
 }
 
+/* Profile Picture Container */
 .profile-picture {
-    width: 100%;
-    border-radius: 20px;
+    position: relative;
+    display: inline-block;
+    padding: 20px;
 }
+
+/* Rounded Profile Picture */
+.profile-picture img {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    border-radius: 20px; /* Ensures rounded edges */
+    position: relative;
+    z-index: 2; /* Places image on top */
+}
+
+/* Background Rounded Squares */
+.profile-picture::before,
+.profile-picture::after {
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    border: 2px solid white;
+    border-radius: 30px; /* Rounded square effect */
+    top: 0;
+    left: 0;
+    transform: rotate(5deg);
+    z-index: 1;
+}
+
+/* Second Background Square */
+.profile-picture::after {
+    width: 120%;
+    height: 120%;
+    top: -10px;
+    left: -10px;
+    transform: rotate(-5deg);
+    z-index: 0;
+    opacity: 0.6;
+}
+
 
 #picture-elizabeth {
     width: 100%;
@@ -234,15 +329,28 @@ header {
 }
 
 /* Titles for Soft and Hard Skills */
+/* Soft & Hard Skills Titles with Ellipse */
 .soft-skills-title, .hard-skills-title {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
     color: white;
     margin: 10px 0 15px;
     padding: 10px 20px;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 30px;
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+    transition: background-color 0.3s ease-in-out;
 }
+
+
+
+/* Hover Effect: Change Background to Body's Background */
+.soft-skills-title:hover, .hard-skills-title:hover {
+    background: black; /* Match body background */
+    transition: background-color 0.3s ease-in-out;
+}
+
 
 /* Containers */
 .soft-skills-container, .hard-skills-container {
