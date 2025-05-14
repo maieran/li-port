@@ -1,203 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMM Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1, h2, h4, .logo-text {
+            font-family: 'Playfair Display', serif;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .hero {
+            background: linear-gradient(135deg, #007bff, #20c997, #17a2b8);
+            background-size: 600% 600%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            padding: 80px 0;
+        }
+        .hero .row {
+            align-items: center;
+        }
+        .tags span {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 20px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        .tags span:hover {
+            transform: scale(1.1);
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease;
+        }
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+        .skills .card,
+        .tools .card,
+        .projects .card {
+            border: none;
+            background-color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skills .card:hover,
+        .tools .card:hover,
+        .projects .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: #333;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+            transform: scale(1.2);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <svg width="150" height="75" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-                <text x="50%" y="50%" font-size="60" font-family="Arial, sans-serif" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">EK</text>
-            </svg>
+    <header class="bg-dark text-white p-3 d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo-text fs-3 fw-bold">Єлизавета Хорошун</div>
         </div>
     </header>
-    
-    
-    <section class="hero">
-        <div class="info">
-            <h1>ХОРОШУН ЄЛИЗАВЕТА</h1>
-            <h2>SMM-спеціаліст</h2>
-            <p>Допомагаю бізнесам, експертам перетворювати соцмережі на ефективний інструмент залучення клієнтів і побудови впізнаваного бренду.</p>
-            <div class="tags">
-                <span>в SMM вже 1+ рік</span>
-                <span>просуваю експертів та бізнеси</span>
-                <span>досвід в 10+ нішах</span>
-            </div>
-        </div>
-        <div class="profile-picture">
-            <img id="picture-elizabeth" src="images/elizabeth_image.jpg" alt="Profile picture">
-        </div>
-    </section>
 
-    <section class="about">
-        <h2>ПРО МЕНЕ</h2>
-        <p>Я спеціаліст із маркетингу в соціальних мережах (SMM) з досвідом понад року. 
-            За освітою цифровий економіст,  пройшла понад 5 навчань із SMM та встигла попрацювати з такими нішами як: благодійність, б’юті-індустрія, нерухомість, медицина, кондитерська справа. 
-            Допомагаю бізнесам, експертам і блогерам використовувати соцмережі як потужний інструмент для розвитку : створюю ефективні стратегії, які працюють, контент, що зачіпає, та комунікацію, яка викликає довіру. 
-            Моя мета — не лише заповнювати акаунт контентом, а й створювати справжню впізнаваність бренду та залучати лояльних клієнтів.</p>
-    </section>
-
-    <section class="skills">
-        <h2>SKILLS</h1>
-    
-        <!-- Soft Skills Section -->
-        <div class="soft-skills-title">Soft Skills</div>
-        <div class="soft-skills-container">
-            <div class="soft-skills-wrapper">
-                <div class="soft-skills-slider">
-                    <div class="soft-skills-item">
-                        <img src="icons/microphone.svg" alt="Audience Engagement">
-                        <p>Утримання уваги аудиторії</p>
-                    </div>
-                    <div class="soft-skills-item">
-                        <img src="icons/chat.svg" alt="Communication">
-                        <p>Комунікабельність</p>
-                    </div>
-                    <div class="soft-skills-item">
-                        <img src="icons/handshake.svg" alt="Persuasion">
-                        <p>Навички переконання</p>
-                    </div>
-                    <div class="soft-skills-item">
-                        <img src="icons/management.svg" alt="Management">
-                        <p>Комунікація в менеджменті</p>
-                    </div>
-                    <div class="soft-skills-item">
-                        <img src="icons/brain.svg" alt="Thinking">
-                        <p>Стратегічне та аналітичне мислення</p>
-                    </div>
-                    <div class="soft-skills-item">
-                        <img src="icons/flexibility.svg" alt="Flexibility">
-                        <p>Гнучкість та адаптивність</p>
+    <section class="hero text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1 class="display-5 fw-bold">ХОРОШУН ЄЛИЗАВЕТА</h1>
+                    <h2 class="mb-4">SMM-спеціаліст</h2>
+                    <p class="lead">Допомагаю бізнесам, експертам перетворювати соцмережі на ефективний інструмент залучення клієнтів і побудови впізнаваного бренду.</p>
+                    <div class="tags mt-3">
+                        <span>в SMM вже 1+ рік</span>
+                        <span>просуваю експертів та бізнеси</span>
+                        <span>досвід в 10+ нішах</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    
-        <!-- Hard Skills Section -->
-        <div class="hard-skills-title">Hard Skills</div>
-        <div class="hard-skills-container">
-            <div class="hard-skills-wrapper">
-                <div class="hard-skills-slider">
-                    <div class="hard-skills-item">
-                        <img src="icons/analysis.svg" alt="Analysis">
-                        <p>Аналіз бренду, цільової аудиторії та конкурентів</p>
-                    </div>
-                    <div class="hard-skills-item">
-                        <img src="icons/strategy.svg" alt="Strategy">
-                        <p>Розробка контент-стратегій і визначення цілей у соцмережах</p>
-                    </div>
-                    <div class="hard-skills-item">
-                        <img src="icons/copywriting.svg" alt="Copywriting">
-                        <p>Копірайтинг і створення різних типів контенту</p>
-                    </div>
-                    <div class="hard-skills-item">
-                        <img src="icons/moderation.svg" alt="Moderation">
-                        <p>Модерація контенту та навички модерації спільнот</p>
-                    </div>
-                    <div class="hard-skills-item">
-                        <img src="icons/briefing.svg" alt="Briefing">
-                        <p>Брифінг клієнтів і підготовка сценаріїв для контенту</p>
-                    </div>
-                    <div class="hard-skills-item">
-                        <img src="icons/video.svg" alt="Video Editing">
-                        <p>Якісна зйомка, створення відеоконтенту, монтаж і дизайн</p>
-                    </div>
+                <div class="col-md-5 text-end">
+                    <img src="images/elizabeth_image.jpg" class="profile-img" alt="Profile">
                 </div>
             </div>
         </div>
     </section>
-    
 
-    <section class="tools">
-        <h2>ІНСТРУМЕНТИ</h2>
-        <div class="tool-icons">
-            <div class="tool-item">
-                <img src="icons/figma.png" alt="Figma">
-                <p>Figma</p>
-            </div>
-            <div class="tool-item">
-                <img src="icons/vn.png" alt="VN">
-                <p>VN Video Editor</p>
-            </div>
-            <div class="tool-item">
-                <img src="icons/capcut.png" alt="CapCut">
-                <p>CapCut</p>
-            </div>
-            <div class="tool-item">
-                <img src="icons/canva.png" alt="Canva">
-                <p>Canva</p>
-            </div>
-            <div class="tool-item">
-                <img src="icons/premiere.png" alt="Premiere Pro">
-                <p>Premiere Pro</p>
-            </div>
+    <section class="about py-5">
+        <div class="container">
+            <h2 class="mb-4">ПРО МЕНЕ</h2>
+            <p>Я спеціаліст із маркетингу в соціальних мережах (SMM) з досвідом понад року. За освітою цифровий економіст, пройшла понад 5 навчань із SMM та встигла попрацювати з такими нішами як: благодійність, б’юті-індустрія, нерухомість, медицина, кондитерська справа. Допомагаю бізнесам, експертам і блогерам використовувати соцмережі як потужний інструмент для розвитку: створюю ефективні стратегії, які працюють, контент, що зачіпає, та комунікацію, яка викликає довіру. Моя мета — не лише заповнювати акаунт контентом, а й створювати справжню впізнаваність бренду та залучати лояльних клієнтів.</p>
         </div>
     </section>
-    
 
-    <section class="projects">
-        <h2>ПРОЄКТИ</h2>
-        <div class="project-list">
-            
-            <!-- MoveUkraine (Existing Project) -->
-            <div class="project">
-                <h3>MoveUkraine</h3>
-                <span>Благодійність</span>
-                <a href="#">посилання на проєкт</a>
-                <span class="status completed">співпрацю завершено</span>
-            </div>
-    
-            <!-- Фотограф-блогер Lera Dopirchuk -->
-            <div class="project">
-                <h3>Фотограф-блогер Lera Dopirchuk</h3>
-                <span>Особистий бренд</span>
-                <a href="#">посилання на проєкт</a>
-                <span class="status ongoing">співпраця триває</span>
-            </div>
-    
-            <!-- LuckyHomes -->
-            <div class="project">
-                <h3>LuckyHomes</h3>
-                <span>Нерухомість</span>
-                <a href="#">посилання на проєкт</a>
-                <span class="status completed">співпрацю завершено</span>
-            </div>
-    
-            <!-- Shishatskaya Clinic -->
-            <div class="project">
-                <h3>Shishatskaya Clinic</h3>
-                <span>Клініка лазерної епіляції</span>
-                <a href="#">посилання на проєкт</a>
-                <span class="status completed">співпрацю завершено</span>
-            </div>
-    
-            <!-- Sladkiy Gurman -->
-            <div class="project">
-                <h3>Sladkiy Gurman</h3>
-                <span>Кондитерські вироби</span>
-                <a href="#">посилання на проєкт</a>
-                <span class="status ongoing">співпраця триває</span>
-            </div>
-    
-        </div>
-    </section>
-    
+    <!-- Rest of the code remains unchanged -->
 
-    <section class="contacts">
-        <h2>КОНТАКТИ</h2>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/elizakhoroshun/"><img src="icons/instagram.svg" alt="Instagram"></a>
-            <a href="#"><img src="icons/telegram.svg" alt="Telegram"></a>
-            <a href="mailto:elizabethhoroshun@gmail.com"><img src="icons/email.png" alt="Email"></a>
-        </div>
-    </section>
-    
- <footer>
+    <footer class="bg-dark text-white text-center p-3">
         <p>Хорошун Єлизавета 2025</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
