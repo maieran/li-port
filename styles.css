@@ -50,10 +50,10 @@ h2:hover {
 h2::after {
     content: "";
     width: 60px;
-    height: 4px;
+    height: 1px;
     background: #c0cace; /* Light blue underline */
     display: block;
-    margin: 5px auto 0;
+    margin: 1px auto 0;
     border-radius: 2px;
     box-shadow: 0 0 10px #9cc4d1; /* Glow effect */
 }
